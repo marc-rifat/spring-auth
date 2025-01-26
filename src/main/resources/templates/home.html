@@ -166,6 +166,9 @@
                     </div>
                     <div class="modal-body">
                         <p>Are you sure you want to delete your account? This action cannot be undone.</p>
+                        <div th:if="${deleteError}" class="alert alert-danger" role="alert">
+                            <span th:text="${deleteError}">Error message</span>
+                        </div>
                         <form th:action="@{/account/delete}" method="post" id="deleteAccountForm">
                             <div class="mb-3">
                                 <label for="confirmPassword" class="form-label">Confirm your password</label>
@@ -183,6 +186,18 @@
         </div>
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+        <script th:inline="javascript">
+            /*<![CDATA[*/
+            document.addEventListener('DOMContentLoaded', function () {
+                const deleteError = /*[[${deleteError}]]*/ null;
+                if (deleteError) {
+                    const deleteModal = new bootstrap.Modal(document.getElementById('deleteAccountModal'));
+                    deleteModal.show();
+                }
+            });
+            /*]]>*/
+        </script>
     </body>
 
 </html>
