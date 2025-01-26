@@ -30,29 +30,3 @@ mvn spring-boot:run
 ```
 
 3. Access the application at `http://localhost:8080`
-
-## Running Tests
-```bash
-mvn test
-```
-```
-
-3. Initialize Git and push to GitHub:
-```bash
-# Initialize Git
-git init
-
-# Add all files
-git add .
-
-# Commit
-git commit -m "Initial commit"
-
-# Add remote repository (replace with your GitHub repo URL)
-git remote add origin https://github.com/YourUsername/spring-auth.git
-
-# Push
-git push -u origin main
-```
-
-Let me know if you need help creating the GitHub repository or have any issues with the push!
