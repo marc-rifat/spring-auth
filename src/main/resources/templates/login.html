@@ -46,10 +46,33 @@
                 font-weight: bold;
                 margin-bottom: 1.5rem;
             }
+
+            .top-banner {
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                background-color: #cff4fc;
+                color: #055160;
+                text-align: center;
+                padding: 10px;
+                z-index: 1000;
+                border-bottom: 1px solid #b6effb;
+            }
         </style>
     </head>
 
     <body>
+        <div class="top-banner">
+            <div class="container">
+                <i class="fas fa-info-circle me-2"></i>
+                <span class="fw-semibold">Default credentials:</span>
+                <span class="ms-2">Email: <code>admin@gmail.com</code></span>
+                <span class="mx-2">|</span>
+                <span>Password: <code>admin</code></span>
+            </div>
+        </div>
+
         <main class="form-signin text-center">
             <form th:action="@{/login}" method="post">
                 <h1 class="brand-name">Auth Demo</h1>
