@@ -4,6 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.context.event.ApplicationReadyEvent;
 import org.springframework.context.event.EventListener;
 import org.springframework.stereotype.Component;
+import org.springframework.beans.factory.annotation.Value;
 
 import java.awt.Desktop;
 import java.io.IOException;
@@ -13,10 +14,12 @@ import java.net.URISyntaxException;
 @Slf4j
 @Component
 public class BrowserOpener {
+    @Value("${server.port}")
+    private String serverPort;
 
     @EventListener(ApplicationReadyEvent.class)
     public void openBrowser() {
-        String url = "http://localhost:8080";
+        String url = "http://localhost:" + serverPort;
         String os = System.getProperty("os.name").toLowerCase();
 
         try {
