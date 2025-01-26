@@ -19,14 +19,7 @@ A simple authentication demo using Spring Boot with features:
 - JUnit 5
 
 ## Getting Started
-1. Clone the repository
-```bash
-git clone https://github.com/YourUsername/spring-auth.git
-```
-
-2. Run the application
+1. Run the application
 ```bash
 mvn spring-boot:run
 ```
-
-3. Access the application at `http://localhost:8080`
