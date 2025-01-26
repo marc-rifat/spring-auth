@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+    <head>
+        <title>Register</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <style>
+            body {
+                background-color: #f8f9fa;
+                height: 100vh;
+                display: flex;
+                align-items: center;
+                padding-top: 40px;
+                padding-bottom: 40px;
+            }
+
+            .form-signup {
+                width: 100%;
+                max-width: 330px;
+                padding: 15px;
+                margin: auto;
+            }
+
+            .form-signup .form-floating:focus-within {
+                z-index: 2;
+            }
+
+            .form-signup input {
+                margin-bottom: 10px;
+            }
+
+            .brand-name {
+                color: #0d6efd;
+                font-weight: bold;
+                margin-bottom: 1.5rem;
+            }
+
+            .error-message {
+                color: #dc3545;
+                font-size: 0.875em;
+                margin-top: -8px;
+                margin-bottom: 8px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <main class="form-signup text-center">
+            <form th:action="@{/register}" th:object="${user}" method="post">
+                <h1 class="brand-name">Create Account</h1>
+
+                <div th:if="${registrationError}" class="alert alert-danger" role="alert"
+                    th:text="${registrationError}">
+                </div>
+
+                <div class="form-floating">
+                    <input type="text" class="form-control" id="floatingName" th:field="*{name}" placeholder="Your Name"
+                        required>
+                    <label for="floatingName">Name</label>
+                    <div class="error-message" th:if="${#fields.hasErrors('name')}" th:errors="*{name}"></div>
+                </div>
+
+                <div class="form-floating">
+                    <input type="email" class="form-control" id="floatingEmail" th:field="*{email}"
+                        placeholder="name@example.com" required>
+                    <label for="floatingEmail">Email address</label>
+                    <div class="error-message" th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></div>
+                    <div class="error-message" th:if="${emailError}" th:text="${emailError}"></div>
+                </div>
+
+                <div class="form-floating">
+                    <input type="password" class="form-control" id="floatingPassword" th:field="*{password}"
+                        placeholder="Password" required>
+                    <label for="floatingPassword">Password</label>
+                    <div class="error-message" th:if="${#fields.hasErrors('password')}" th:errors="*{password}"></div>
+                </div>
+
+                <button class="w-100 btn btn-lg btn-primary mb-3" type="submit">Register</button>
+
+                <div class="text-center">
+                    <p class="mb-3 text-muted">Already have an account?
+                        <a th:href="@{/login}" class="text-decoration-none">Sign in</a>
+                    </p>
+                </div>
+            </form>
+        </main>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+
+</html>
