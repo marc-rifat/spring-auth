@@ -6,8 +6,8 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
         <style>
             body {
-                background-color: #f8f9fa;
-                height: 100vh;
+                background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+                min-height: 100vh;
                 display: flex;
                 align-items: center;
                 padding-top: 40px;
@@ -16,34 +16,58 @@
 
             .form-signin {
                 width: 100%;
-                max-width: 330px;
-                padding: 15px;
+                max-width: 380px;
+                padding: 2rem;
                 margin: auto;
+                background: white;
+                border-radius: 15px;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
             }
 
             .form-signin .form-floating:focus-within {
                 z-index: 2;
             }
 
-            .form-signin input[type="email"] {
-                margin-bottom: -1px;
-                border-bottom-right-radius: 0;
-                border-bottom-left-radius: 0;
-            }
-
-            .form-signin input[type="password"] {
-                margin-bottom: 10px;
-                border-top-left-radius: 0;
-                border-top-right-radius: 0;
-            }
-
-            .alert {
+            .form-floating {
                 margin-bottom: 1rem;
             }
 
+            .form-control {
+                border-radius: 8px;
+                padding: 0.8rem 1rem;
+                border: 2px solid #e9ecef;
+                transition: all 0.3s ease;
+            }
+
+            .form-control:focus {
+                border-color: #4B79A1;
+                box-shadow: 0 0 0 0.2rem rgba(75, 121, 161, 0.25);
+            }
+
             .brand-name {
-                color: #0d6efd;
+                color: #4B79A1;
                 font-weight: bold;
+                margin-bottom: 2rem;
+                font-size: 2.2rem;
+            }
+
+            .btn-primary {
+                background: linear-gradient(135deg, #4B79A1 0%, #283E51 100%);
+                border: none;
+                padding: 0.8rem;
+                font-weight: 500;
+                transition: all 0.3s ease;
+            }
+
+            .btn-primary:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 4px 8px rgba(75, 121, 161, 0.3);
+            }
+
+            .alert {
+                border: none;
+                border-radius: 8px;
+                padding: 1rem;
                 margin-bottom: 1.5rem;
             }
 
@@ -52,12 +76,31 @@
                 top: 0;
                 left: 0;
                 right: 0;
-                background-color: #cff4fc;
+                background: linear-gradient(135deg, #cff4fc 0%, #b6effb 100%);
                 color: #055160;
                 text-align: center;
-                padding: 10px;
+                padding: 0.8rem;
                 z-index: 1000;
-                border-bottom: 1px solid #b6effb;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            }
+
+            .text-muted {
+                color: #6c757d !important;
+            }
+
+            a {
+                color: #4B79A1;
+                transition: all 0.3s ease;
+            }
+
+            a:hover {
+                color: #283E51;
+            }
+
+            code {
+                background: rgba(255, 255, 255, 0.5);
+                padding: 0.2rem 0.4rem;
+                border-radius: 4px;
             }
         </style>
     </head>
@@ -102,7 +145,7 @@
                     <label for="floatingPassword">Password</label>
                 </div>
 
-                <button class="w-100 btn btn-lg btn-primary mb-3" type="submit">Sign in</button>
+                <button class="w-100 btn btn-primary" type="submit">Sign in</button>
 
                 <div class="text-center">
                     <p class="mb-3 text-muted">Don't have an account?

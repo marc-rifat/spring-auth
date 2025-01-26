@@ -11,39 +11,126 @@
             }
 
             .welcome-card {
-                background: linear-gradient(135deg, #6B73FF 0%, #000DFF 100%);
+                background: linear-gradient(135deg, #4B79A1 0%, #283E51 100%);
                 color: white;
                 border: none;
                 border-radius: 15px;
+                transition: transform 0.3s ease;
+            }
+
+            .welcome-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
             }
 
             .stats-card {
                 border-radius: 10px;
                 border: none;
-                box-shadow: 0 2px 4px rgba(0, 0, 0, .05);
-                transition: transform 0.2s;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, .08);
+                transition: all 0.3s ease;
+                background: white;
             }
 
             .stats-card:hover {
                 transform: translateY(-5px);
+                box-shadow: 0 8px 15px rgba(0, 0, 0, .1);
             }
 
             .stats-icon {
-                font-size: 2rem;
-                color: #0d6efd;
+                font-size: 2.2rem;
+                color: #4B79A1;
+                transition: transform 0.3s ease;
+            }
+
+            .stats-card:hover .stats-icon {
+                transform: scale(1.1);
             }
 
             .user-avatar {
                 width: 40px;
                 height: 40px;
                 border-radius: 50%;
-                background-color: #0d6efd;
+                background: linear-gradient(135deg, #4B79A1 0%, #283E51 100%);
                 color: white;
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 font-weight: bold;
                 margin-right: 10px;
+                transition: transform 0.3s ease;
+            }
+
+            .user-avatar:hover {
+                transform: scale(1.1);
+            }
+
+            .dropdown-item {
+                padding: 0.7rem 1.2rem;
+                transition: all 0.2s ease;
+            }
+
+            .dropdown-item:hover {
+                background-color: #f8f9fa;
+                transform: translateX(5px);
+            }
+
+            .dropdown-item.text-danger:hover {
+                background-color: #dc3545;
+                color: white !important;
+            }
+
+            .btn {
+                padding: 0.5rem 1.5rem;
+                font-weight: 500;
+                transition: all 0.3s ease;
+            }
+
+            .btn-danger {
+                background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
+                border: none;
+            }
+
+            .btn-danger:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 4px 8px rgba(220, 53, 69, 0.3);
+            }
+
+            .btn-secondary {
+                background: linear-gradient(135deg, #6c757d 0%, #5a6268 100%);
+                border: none;
+            }
+
+            .btn-secondary:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 4px 8px rgba(108, 117, 125, 0.3);
+            }
+
+            .modal-content {
+                border-radius: 15px;
+                border: none;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            }
+
+            .modal-header {
+                border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+                padding: 1.5rem;
+            }
+
+            .modal-footer {
+                border-top: 1px solid rgba(0, 0, 0, 0.1);
+                padding: 1.5rem;
+            }
+
+            .form-control {
+                border-radius: 8px;
+                padding: 0.8rem 1rem;
+                border: 2px solid #e9ecef;
+                transition: all 0.3s ease;
+            }
+
+            .form-control:focus {
+                border-color: #4B79A1;
+                box-shadow: 0 0 0 0.2rem rgba(75, 121, 161, 0.25);
             }
         </style>
     </head>

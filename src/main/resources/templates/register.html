@@ -6,8 +6,8 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
         <style>
             body {
-                background-color: #f8f9fa;
-                height: 100vh;
+                background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+                min-height: 100vh;
                 display: flex;
                 align-items: center;
                 padding-top: 40px;
@@ -16,30 +16,81 @@
 
             .form-signup {
                 width: 100%;
-                max-width: 330px;
-                padding: 15px;
+                max-width: 380px;
+                padding: 2rem;
                 margin: auto;
+                background: white;
+                border-radius: 15px;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
             }
 
             .form-signup .form-floating:focus-within {
                 z-index: 2;
             }
 
-            .form-signup input {
-                margin-bottom: 10px;
+            .form-floating {
+                margin-bottom: 1rem;
+            }
+
+            .form-control {
+                border-radius: 8px;
+                padding: 0.8rem 1rem;
+                border: 2px solid #e9ecef;
+                transition: all 0.3s ease;
+            }
+
+            .form-control:focus {
+                border-color: #4B79A1;
+                box-shadow: 0 0 0 0.2rem rgba(75, 121, 161, 0.25);
             }
 
             .brand-name {
-                color: #0d6efd;
+                color: #4B79A1;
                 font-weight: bold;
+                margin-bottom: 2rem;
+                font-size: 2.2rem;
+            }
+
+            .btn-primary {
+                background: linear-gradient(135deg, #4B79A1 0%, #283E51 100%);
+                border: none;
+                padding: 0.8rem;
+                font-weight: 500;
+                transition: all 0.3s ease;
+            }
+
+            .btn-primary:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 4px 8px rgba(75, 121, 161, 0.3);
+            }
+
+            .alert {
+                border: none;
+                border-radius: 8px;
+                padding: 1rem;
                 margin-bottom: 1.5rem;
             }
 
             .error-message {
                 color: #dc3545;
                 font-size: 0.875em;
-                margin-top: -8px;
-                margin-bottom: 8px;
+                margin-top: -0.5rem;
+                margin-bottom: 0.5rem;
+                text-align: left;
+                padding-left: 0.5rem;
+            }
+
+            .text-muted {
+                color: #6c757d !important;
+            }
+
+            a {
+                color: #4B79A1;
+                transition: all 0.3s ease;
+            }
+
+            a:hover {
+                color: #283E51;
             }
         </style>
     </head>
